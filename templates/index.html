@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Willkommen</title>
+</head>
+<body>
+    <h1 color="{{ favorite_color }}"">Willkommen, {{ username }}!</h1>
+    <a href="/">Home</a><br>
+    <a href="/logout">Logout</a><br>
+    <h2>Ihre Lieblingsfarbe: {{ favorite_color }}</h2>
+    <form method="POST" action="/set_color">
+        <label for="new_color">Neue Lieblingsfarbe (Hexadezimal):</label>
+        <input type="text" id="new_color" name="new_color" required pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$">
+        <input type="submit" value="Ändern">
+    </form>
+</body>
+</html>
